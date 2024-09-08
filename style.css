@@ -114,6 +114,9 @@ nav {
     font-size: 9vw;
     text-align: right;
     line-height: 8vw;
+    color: #1c1a1a;
+    position: relative;
+    z-index: 10;
 }
 
 #page1 video {
@@ -149,7 +152,6 @@ nav {
     position: absolute;
     border-radius: 50%;
     filter:blur(20px);
-
     /* Animation  */
     animation-name: anime2;
     animation-duration: 5s;
@@ -165,7 +167,6 @@ nav {
     position: absolute;
     border-radius: 50%;
     filter:blur(25px);
-
     /* Animation  */
     animation-name: anime1;
     animation-duration: 5s;
@@ -372,35 +373,35 @@ nav {
 .swiper {
     width: 100%;
     height: 100%;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .swiper-slide img {
+.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
     width: 60%;
-  }
+}
 
-  .swiper-slide:nth-child(2n) {
+.swiper-slide:nth-child(2n) {
     width: 40%;
-  }
+}
 
-  .swiper-slide:nth-child(3n) {
+.swiper-slide:nth-child(3n) {
     width: 20%;
-  }
+}
 
 #page5 {
     height: 100vh;
@@ -412,24 +413,50 @@ nav {
     height: 100vh;
     width: 100%;
     z-index: 9;
-    background-color: black;
+    background: linear-gradient(to top left,black, #FE320A);;
     color: #fff;
     bottom: 0;
     display: flex;
     /* align-items: flex-end; */
     justify-content: flex-end;
     flex-direction: column;
-    padding: 1vw 2vw;
+    padding: 1vw 0vw;
 }
 
 #footer h1 {
+    /* background-color: black */
     font-size: 23vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #footer-div {
     height: 20vh;
     width: 100%;
-    background-color: red;
+    background-color: #FE320A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* New  */
+    filter: blur(20px);
+    animation-name: footer-anime;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: top right;
+}
+
+/* New  */
+@keyframes footer-anime {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
 }
 
 #footer-bottom {
@@ -437,6 +464,20 @@ nav {
     height: 10vh;
     width: 100%;
 }
+
+#footer-div1 {
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(#FE320A);
+
+    /* New  */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    border-radius: 50%;
+    filter: blur(30px);
+}
+
 
 #loader {
     height: 100%;
@@ -493,3 +534,4 @@ nav {
       
     }
 }
+
